@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="seats")
 public class Seats{
-
-	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="seat_no")

@@ -27,7 +27,7 @@ public class BookingController {
 	 
 	  @GetMapping(value = "/listseat")
 	  public String SeatBooking(Model theModel) {
-	    	System.out.println("In list customers method");
+	    	System.out.println("In seat booking method");
 	        List < Seats > seat = dao.getAllSeats();
 	        theModel.addAttribute("seats", seat);
 	        return "bookingseats";

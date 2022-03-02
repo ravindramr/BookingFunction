@@ -59,7 +59,7 @@
 								
 								  <div class="row justify-content-center">
 								  <div class="col-sm-12">
-								  <input id="seat-1" class="seat-select" type="checkbox" value="R1-1" name="seat">
+								  <input id="seat-1" class="seat-select" type="checkbox" value="R1-1" name="seat_no">
 								  <label for="seat-1" class="seat">1</label>
 								  <input id="seat-2" class="seat-select" type="checkbox" value="R1-2" name="seat">
 								  <label for="seat-2" class="seat">2</label>
