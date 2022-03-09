@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @PropertySource("classpath:database.properties")
 @EnableTransactionManagement
 public class AppContext { // The Environment class serves as the property holder
-	// and stores all the properties loaded by the @PropertySource
+// and stores all the properties loaded by the @PropertySource
 	@Autowired
 	private Environment environment;
 

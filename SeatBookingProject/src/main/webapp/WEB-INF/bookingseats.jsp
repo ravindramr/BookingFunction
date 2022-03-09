@@ -13,7 +13,7 @@ import="org.hibernate.*"%>
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/bootstrap/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/style.css" type="text/css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/style1.css" type="text/css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/seats.css" type="text/css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font-awesome.css" type="text/css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/animation.css" type="text/css">
@@ -25,10 +25,14 @@ import="org.hibernate.*"%>
 <body>
 <div class="movie-container">
 <label> Movie Name :</label>
-<c:forEach var="movie" items="${movies}">
-<label>${movie.name }</label>
-
+<c:forEach var="movie" items="${movies}"> 
 </c:forEach>
+<%-- <c:set var= "id" value="movie_id"/>
+<c:set var="name" value="movie_name"/>
+<c:if test="${(id == '1') && (name == 'rr')}">
+<label>${movie.name }</label>
+</c:if> --%>
+ 
 </div>
 <form action="ticket">
 <label for="seatbooking">Set date :</label>
@@ -50,7 +54,7 @@ Select Show Time:
 
 <br><br>
 --%>
-<form action="http://localhost:8080/BookingFunction/booking/submit" method="GET">
+<form action="http://localhost:8080/SeatBookingProject/booking/submit" method="GET">
 <div class="container">
 <div class="sc">
 <h1>SCREEN</h1><br>
@@ -304,7 +308,7 @@ Select Show Time:
 <div class="form-group">
 <button type="submit" value="submit" class="btn cust-btn">Book</button>
 <c:forEach var="Seats" items="${Seats.insert}">
-<c:url var="insertLink" value="http://localhost:8080/BookingFunction/booking/submit">
+<c:url var="insertLink" value="http://localhost:8080/SeatBookingProject/booking/submit">
 <c:param name="seat_no" value="${Seats.seat_no}" />
 </c:url>
 <a href="${insertLink}">Book</a>
